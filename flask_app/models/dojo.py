@@ -30,7 +30,7 @@ class Dojo:
         results = connectToMySQL('dojos_and_ninjas_schema_jg').query_db(query,data)
         print(results)
         dojo = cls(results[0])
-        for row in results:
+        for n in results:
             n = {
                 'id': row['ninjas.id'],
                 'first_name': row['first_name'],
